@@ -1,0 +1,55 @@
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.header {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #333;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-title {
+  font-family: "Syne", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+  text-decoration: none;
+  color: #E0E0E0;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 2rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #E0E0E0;
+}
+nav a:hover {
+  color: #7747FF;
+}
+
+body {
+  background-color: #121212;
+  color: #E0E0E0;
+  font-family: "Inter", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Syne", sans-serif;
+}
+
+/*# sourceMappingURL=main.css.map */

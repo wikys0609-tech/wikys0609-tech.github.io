@@ -1,53 +1,46 @@
-/******************************************************************************
- * Content
- ******************************************************************************/
-
-body {
-  padding-bottom: 70px;
-  color: var(--global-text-color);
-  background-color: var(--global-bg-color);
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    scroll-margin-top: 66px;
-  }
-}
-
-body.fixed-top-nav {
-  // Add some padding for the nav-bar.
-  padding-top: 56px;
-}
-
-body.sticky-bottom-footer {
-  // Remove padding below footer.
-  padding-bottom: 0;
-}
-
 .container {
-  max-width: $max-content-width;
+  max-width: 1100px;  // 콘텐츠의 최대 너비를 1100px로 제한
+  margin: 0 auto;     // 박스를 화면 중앙에 위치시킴
+  padding: 0 2rem;    // 화면이 작아질 때를 대비해 양옆에 여백(padding)을 줌
 }
 
-// Profile
-.profile {
-  img {
-    width: 100%;
+// Header
+.header {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #333; // 헤더와 본문을 구분하는 얇은 선
+}
+
+.header-container {
+  display: flex;                // 자식 요소들을 가로로 배치
+  justify-content: space-between; // 양쪽 끝으로 밀어냄
+  align-items: center;          // 세로 중앙 정렬
+}
+
+.site-title {
+  font-family: $heading-font; // 제목 폰트 적용
+  font-size: 1.5rem;          // 폰트 크기
+  font-weight: 800;           // 폰트 굵기
+  text-decoration: none;      // 링크 밑줄 제거
+  color: $text-color;         // 글자색
+}
+
+// Navigation
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; // 리스트 앞에 붙는 점 제거
+}
+
+nav li {
+  display: inline-block; // 메뉴를 가로로 나란히 배치
+  margin-left: 2rem;     // 메뉴 사이 간격
+}
+
+nav a {
+  text-decoration: none; // 링크 밑줄 제거
+  color: $text-color;    // 글자색
+
+  &:hover {
+    color: $theme-color; // 마우스를 올리면 테마 색상으로 변경
   }
 }
-
-// TODO: redefine content layout.
-
-/******************************************************************************
- * Publications
- ******************************************************************************/
-
-// TODO: redefine publications layout.
-
-/*****************************************************************************
-* Projects
-*****************************************************************************/
-
-// TODO: redefine projects layout.

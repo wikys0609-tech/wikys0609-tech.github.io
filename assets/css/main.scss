@@ -1,25 +1,14 @@
 ---
-# Only the main Sass file needs front matter (the dashes are enough)
 ---
-@charset "utf-8";
+@import "variables";
+@import "layout";
 
-// Dimensions
-$max-content-width: {{ site.max_width }};
+body {
+  background-color: $background-color;
+  color: $text-color;
+  font-family: $body-font; // 👈 웹사이트 전체 기본 폰트를 Inter로 설정
+}
 
-@import
-  "variables",
-  "themes",
-  "layout",
-  "base",
-  "distill",
-  "cv",
-  "tabs",
-  "typograms",
-  "font-awesome/fontawesome",
-  "font-awesome/brands",
-  "font-awesome/solid",
-  "font-awesome/regular",
-  "tabler-icons/tabler-icons.scss",
-  "tabler-icons/tabler-icons-filled.scss",
-  "tabler-icons/tabler-icons-outline.scss"
-;
+h1, h2, h3, h4, h5, h6 {
+  font-family: $heading-font; // 👈 모든 제목 폰트를 Syne으로 설정
+}

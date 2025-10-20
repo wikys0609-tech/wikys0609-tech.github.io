@@ -194,3 +194,24 @@ nav a {
     color: $theme-color; // 마우스를 올리면 테마 색상으로 변경
   }
 }
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+  .project-grid,
+  .skills-grid {
+    grid-template-columns: 1fr; // 화면이 768px보다 작으면 무조건 1열로 변경
+  }
+
+  .header-container {
+    flex-direction: column; // 헤더의 제목과 메뉴를 위아래로 배치
+  }
+
+  .site-title {
+    margin-bottom: 1rem;
+  }
+
+  nav li {
+    margin-left: 1rem; // 모바일에서는 메뉴 간격을 조금 줄임
+    margin-right: 1rem;
+  }
+}

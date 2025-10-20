@@ -42,6 +42,150 @@ nav a:hover {
   color: #7747FF;
 }
 
+.experience-section {
+  padding-top: 4rem;
+}
+
+.experience-section h2 {
+  margin-bottom: 2rem;
+}
+
+.experience-item {
+  padding: 1.5rem 0;
+  border-top: 1px solid #333;
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.5rem;
+}
+
+.experience-header h3 {
+  margin: 0;
+  color: #E0E0E0;
+  font-size: 1.25rem;
+}
+
+.experience-header span {
+  color: #999;
+  font-size: 0.9rem;
+}
+
+.experience-item ul {
+  padding-left: 1.5rem;
+  margin: 0;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.project-section {
+  padding-top: 4rem;
+}
+
+.project-section h2 {
+  margin-bottom: 2rem;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.project-card {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  padding: 1.5rem;
+  border-radius: 8px;
+  transition: all 0.2s ease-in-out;
+}
+.project-card:hover {
+  transform: translateY(-5px);
+  border-color: #7747FF;
+}
+
+.project-card h3 {
+  margin-top: 0;
+  color: #fff;
+}
+
+.project-card p {
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.project-card ul {
+  padding: 0;
+  margin: 1rem 0;
+  list-style: none;
+}
+
+.project-card li {
+  display: inline-block;
+  background-color: #333;
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-link {
+  color: #7747FF;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.skills-section {
+  padding-top: 4rem;
+}
+
+.skills-section h2 {
+  margin-bottom: 2rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.skill-category {
+  border-top: 3px solid #7747FF;
+  padding-top: 1rem;
+}
+
+.skill-category h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.skill-category p {
+  margin: 0;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.site-footer {
+  padding: 2rem 0;
+  margin-top: 4rem;
+  border-top: 1px solid #333;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #999;
+}
+
+.footer-links a {
+  color: #999;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+.footer-links a:hover {
+  color: #7747FF;
+}
+
 body {
   background-color: #121212;
   color: #E0E0E0;

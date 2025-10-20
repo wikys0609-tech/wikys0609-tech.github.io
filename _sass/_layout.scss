@@ -44,3 +44,153 @@ nav a {
     color: $theme-color; // 마우스를 올리면 테마 색상으로 변경
   }
 }
+
+// Experience Section
+.experience-section {
+  padding-top: 4rem; // 윗 섹션(자기소개)과 간격을 줍니다.
+}
+
+.experience-section h2 {
+  margin-bottom: 2rem; // "Experience" 제목과 아래 내용 사이의 간격
+}
+
+.experience-item {
+  padding: 1.5rem 0; // 각 경력 항목의 위아래 여백
+  border-top: 1px solid #333; // 경력 항목을 구분하는 선
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between; // 직책은 왼쪽, 기간은 오른쪽으로 배치
+  align-items: baseline;
+  margin-bottom: 0.5rem;
+}
+
+.experience-header h3 {
+  margin: 0; // 기본 h3 마진 제거
+  color: $text-color;
+  font-size: 1.25rem;
+}
+
+.experience-header span {
+  color: #999; // 기간 글자색을 약간 흐리게
+  font-size: 0.9rem;
+}
+
+.experience-item ul {
+  padding-left: 1.5rem; // 리스트의 왼쪽 여백
+  margin: 0;
+  color: #ccc;
+  line-height: 1.6; // 줄 간격을 넓혀 가독성 확보
+}
+
+// Project Section
+.project-section {
+  padding-top: 4rem;
+}
+
+.project-section h2 {
+  margin-bottom: 2rem;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); // 카드를 1:1 비율의 2열로 배치
+  gap: 2rem; // 카드 사이의 간격
+}
+
+.project-card {
+  background-color: #1e1e1e; // 카드 배경색을 살짝 밝게
+  border: 1px solid #333;
+  padding: 1.5rem;
+  border-radius: 8px; // 모서리를 둥글게
+  transition: all 0.2s ease-in-out; // 부드러운 효과를 위한 준비
+
+  &:hover {
+    transform: translateY(-5px); // 마우스를 올리면 살짝 위로 이동
+    border-color: $theme-color;
+  }
+}
+
+.project-card h3 {
+  margin-top: 0;
+  color: #fff; // 카드 제목은 더 밝은 흰색으로
+}
+
+.project-card p {
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.project-card ul {
+  padding: 0;
+  margin: 1rem 0;
+  list-style: none;
+}
+
+.project-card li {
+  display: inline-block;
+  background-color: #333;
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-link {
+  color: $theme-color;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+// Skills Section
+.skills-section {
+  padding-top: 4rem;
+}
+
+.skills-section h2 {
+  margin-bottom: 2rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); // 1:1:1 비율의 3열로 배치
+  gap: 2rem; // 열 사이의 간격
+}
+
+.skill-category {
+  border-top: 3px solid $theme-color; // 각 카테고리 상단에 테마 색상으로 포인트
+  padding-top: 1rem;
+}
+
+.skill-category h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.skill-category p {
+  margin: 0;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+// Footer
+.site-footer {
+  padding: 2rem 0;
+  margin-top: 4rem; // 마지막 섹션과 충분한 간격을 줍니다.
+  border-top: 1px solid #333; // 본문과 구분되는 얇은 선
+  text-align: center; // 모든 내용을 중앙 정렬
+  font-size: 0.9rem;
+  color: #999; // 저작권 텍스트는 약간 흐리게
+}
+
+.footer-links a {
+  color: #999;
+  text-decoration: none;
+  margin: 0 0.5rem;
+
+  &:hover {
+    color: $theme-color; // 마우스를 올리면 테마 색상으로 변경
+  }
+}

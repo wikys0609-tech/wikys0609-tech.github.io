@@ -1,37 +1,64 @@
+// 커스텀 폰트 등록
 @font-face {
-  font-family: '엘리스코딩-볼드'; // 👈 굵은 폰트에 붙여줄 이름
+  font-family: '엘리스코딩-볼드';
   src: url('../fonts/EliceDigitalCodingverH_Bold.ttf') format('truetype');
-  font-weight: 800; // 이 폰트는 굵은 폰트라고 지정
+  font-weight: 800;
 }
 
 @font-face {
-  font-family: '엘리스코딩-레귤러'; // 👈 일반 폰트에 붙여줄 이름
+  font-family: '엘리스코딩-레귤러';
   src: url('../fonts/EliceDigitalCodingverH_Regular.ttf') format('truetype');
-  font-weight: 400; // 이 폰트는 일반 굵기(400)라고 지정
+  font-weight: 400;
 }
 
-// Typography
+// 기본 타이포그래피 스타일
 body {
-  font-size: 1.125rem; // 기본 본문 폰트 크기를 살짝 키웁니다 (18px)
-  line-height: 1.7;    // 줄 간격을 넓혀 가독성을 높입니다.
+  font-family: $body-font;
+  font-size: 1.125rem; // 18px
+  line-height: 1.7;
+  background-color: $background-color;
+  color: $text-color;
 }
 
-// h1: post-title (메인 제목)
+// 제목 태그
+h1, h2, h3, h4, h5, h6 {
+  font-family: $heading-font;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+// 메인 타이틀 (h1)
 .post-title {
-  font-size: 5rem;     // 폰트 크기를 매우 크게
-  font-weight: 800;    // 가장 굵은 굵기
+  font-size: 5rem;
   margin-bottom: 0.5rem;
-  line-height: 1.1;
 }
 
-// p: post-description (메인 제목 아래 한 줄 소개)
+// 메인 한 줄 소개 (p)
 .post-description {
   font-size: 1.25rem;
-  color: #ccc;
+  color: $secondary-text-color;
+  margin-bottom: 3rem;
 }
 
-// h2: Section Titles (Experience, Projects...)
+// 섹션 제목 (h2)
 h2 {
-  font-size: 3rem;     // 섹션 제목도 매우 크게
-  font-weight: 800;
+  font-size: 3rem;
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+// 서브 제목 (h3)
+h3 {
+  font-size: 1.25rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+// 링크
+a {
+  color: $theme-color;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
 }

@@ -1,16 +1,15 @@
+@charset "UTF-8";
 /* Smooth Scroll */
 html {
   scroll-behavior: smooth;
 }
 
-/* 기본 레이아웃 */
 .container {
   max-width: 800px;
   margin: 0 auto;
   padding: 0 2rem;
 }
 
-/* 헤더 */
 .header {
   padding: 2rem 0;
 }
@@ -21,46 +20,65 @@ html {
   align-items: center;
 }
 
-/* 사이트 제목 (헤더) */
 .site-title {
-  font-family: "엘리스코딩-볼드", sans-serif;
+  font-family: "구름코딩-레귤러", sans-serif;
   font-size: 1.5rem;
   font-weight: 800;
   text-decoration: none;
-  color: #111827;
+  color: #E0E0E0;
 }
 .site-title:hover {
   text-decoration: none;
   color: #7747FF;
 }
 
-/* 내비게이션 */
 nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
+
 nav li {
   display: inline-block;
   margin-left: 2rem;
 }
+
 nav a {
   text-decoration: none;
-  color: #111827;
+  color: #E0E0E0;
   font-weight: bold;
-  font-family: "엘리스코딩-레귤러", sans-serif;
+  font-family: "구름산스-레귤러", sans-serif;
 }
 nav a:hover {
   color: #7747FF;
   text-decoration: none;
 }
 
-/* 각 섹션의 공통 스타일 */
-.experience-section, .project-section, .skills-section {
-  padding-top: 6rem; /* 섹션 간 간격을 매우 넓게 */
+.social-links {
+  margin-top: 1.5rem;
+  color: #6B7280;
+  font-size: 1rem;
+  font-family: "구름산스-레귤러", sans-serif;
 }
 
-/* 경력(Experience) 섹션 */
+.social-links a {
+  font-weight: bold;
+  color: #E0E0E0;
+  margin: 0 0.5rem;
+}
+.social-links a:hover {
+  color: #7747FF;
+  text-decoration: none;
+}
+
+.social-links span {
+  margin-right: 0.5rem;
+}
+
+.experience-section, .project-section, .skills-section {
+  padding-top: 6rem;
+}
+
 .experience-item {
   padding: 1.5rem 0;
   border-bottom: 1px solid #E5E7EB;
@@ -68,16 +86,19 @@ nav a:hover {
 .experience-item:first-of-type {
   padding-top: 0;
 }
+
 .experience-header {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   margin-bottom: 0.5rem;
 }
+
 .experience-header span {
   color: #6B7280;
   font-size: 0.9rem;
 }
+
 .experience-item ul {
   padding-left: 1.5rem;
   margin: 0;
@@ -85,31 +106,35 @@ nav a:hover {
   line-height: 1.6;
 }
 
-/* 프로젝트(Projects) 섹션 */
 .project-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 3rem;
 }
+
 .project-card {
   transition: transform 0.2s ease-in-out;
 }
 .project-card:hover {
   transform: translateY(-5px);
 }
+
 .project-card h3 {
   margin-top: 0;
 }
+
 .project-card p {
   color: #6B7280;
   line-height: 1.6;
   margin-bottom: 1.5rem;
 }
+
 .project-card ul {
   padding: 0;
   margin: 1.5rem 0;
   list-style: none;
 }
+
 .project-card li {
   display: inline-block;
   background-color: #f3f4f6;
@@ -120,28 +145,29 @@ nav a:hover {
   margin-bottom: 0.5rem;
   color: #4b5563;
 }
+
 .project-link {
   font-weight: bold;
-  font-family: "엘리스코딩-레귤러", sans-serif;
+  font-family: "구름산스-레귤러", sans-serif;
 }
 
-/* 기술(Skills) 섹션 */
 .skills-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2.5rem;
 }
+
 .skill-category h3 {
   margin-top: 0;
   margin-bottom: 0.5rem;
 }
+
 .skill-category p {
   margin: 0;
   color: #6B7280;
   line-height: 1.6;
 }
 
-/* 푸터 */
 .site-footer {
   padding: 4rem 0;
   margin-top: 6rem;
@@ -150,6 +176,7 @@ nav a:hover {
   font-size: 0.9rem;
   color: #6B7280;
 }
+
 .footer-links a {
   color: #6B7280;
   text-decoration: none;
@@ -173,16 +200,15 @@ nav a:hover {
     margin-right: 0.75rem;
   }
   .post-title {
-    font-size: 3rem; /* 모바일에서는 메인 제목 크기 줄임 */
+    font-size: 2.5rem;
   }
   h2 {
-    font-size: 2.25rem; /* 모바일에서는 섹션 제목 크기 줄임 */
+    font-size: 2.25rem;
   }
   .experience-section, .project-section, .skills-section {
-    padding-top: 4rem; /* 섹션 간 간격 줄임 */
+    padding-top: 4rem;
   }
 }
-/* 커스텀 폰트 등록 */
 @font-face {
   font-family: "엘리스코딩-볼드";
   src: url("../fonts/EliceDigitalCodingverH_Bold.ttf") format("truetype");
@@ -193,50 +219,87 @@ nav a:hover {
   src: url("../fonts/EliceDigitalCodingverH_Regular.ttf") format("truetype");
   font-weight: 400;
 }
-/* 기본 타이포그래피 스타일 */
+/* --- 8가지 커스텀 폰트 등록 --- */
+/* 북끄 고딕 계열 */
+@font-face {
+  font-family: "북끄고딕-볼드";
+  src: url("../fonts/BookkGothic_Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "북끄고딕-라이트";
+  src: url("../fonts/BookkGothic_Light.ttf") format("truetype");
+  font-weight: 300;
+}
+/* 북끄 명조 계열 */
+@font-face {
+  font-family: "북끄명조-볼드";
+  src: url("../fonts/BookkMyungjo_Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "북끄명조-라이트";
+  src: url("../fonts/BookkMyungjo_Light.ttf") format("truetype");
+  font-weight: 300;
+}
+/* 구름 산스 계열 */
+@font-face {
+  font-family: "구름산스-볼드";
+  src: url("../fonts/goorm-sans-bold.ttf") format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "구름산스-미디엄";
+  src: url("../fonts/goorm-sans-medium.ttf") format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "구름산스-레귤러";
+  src: url("../fonts/goorm-sans-regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "구름코딩-레귤러";
+  src: url("../fonts/goorm_Sans_Code_400.ttf") format("truetype");
+  font-weight: 400;
+}
 body {
-  font-family: "엘리스코딩-레귤러", sans-serif;
-  font-size: 1.125rem; /* 18px */
+  font-family: "구름산스-레귤러", sans-serif;
+  font-size: 1.125rem;
   line-height: 1.7;
-  background-color: #FFFFFF;
-  color: #111827;
+  background-color: #121212;
+  color: #E0E0E0;
 }
 
-/* 제목 태그 */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "엘리스코딩-볼드", sans-serif;
+  font-family: "구름코딩-레귤러", sans-serif;
   font-weight: 800;
   line-height: 1.2;
 }
 
-/* 메인 타이틀 (h1) */
 .post-title {
-  font-size: 5rem;
+  font-size: 3.5rem;
   margin-bottom: 0.5rem;
 }
 
-/* 메인 한 줄 소개 (p) */
 .post-description {
   font-size: 1.25rem;
   color: #6B7280;
   margin-bottom: 3rem;
 }
 
-/* 섹션 제목 (h2) */
 h2 {
   font-size: 3rem;
   margin-top: 0;
   margin-bottom: 2rem;
 }
 
-/* 서브 제목 (h3) */
 h3 {
   font-size: 1.25rem;
   margin-top: 0;
   margin-bottom: 1rem;
 }
 
-/* 링크 */
 a {
   color: #7747FF;
   text-decoration: none;
@@ -244,3 +307,15 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+body {
+  background-color: #121212;
+  color: #E0E0E0;
+  font-family: "구름산스-레귤러", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "구름코딩-레귤러", sans-serif;
+}
+
+/*# sourceMappingURL=main.css.map */

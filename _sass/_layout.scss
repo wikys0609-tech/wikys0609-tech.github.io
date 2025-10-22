@@ -48,6 +48,30 @@ nav a {
   }
 }
 
+// 👇 여기에 새 코드 추가 👇
+// 소개글 아래 소셜 링크
+.social-links {
+  margin-top: 1.5rem;
+  color: $secondary-text-color; // "Find me on" 텍스트 색상
+  font-size: 1rem;
+  font-family: $body-font;
+}
+
+.social-links a {
+  font-weight: bold;
+  color: $text-color; // 링크는 기본 텍스트 색상
+  margin: 0 0.5rem;
+
+  &:hover {
+    color: $theme-color;
+    text-decoration: none;
+  }
+}
+
+.social-links span {
+  margin-right: 0.5rem;
+}
+
 // 각 섹션의 공통 스타일
 .experience-section, .project-section, .skills-section {
   padding-top: 6rem; // 섹션 간 간격을 매우 넓게
@@ -146,7 +170,7 @@ nav a {
     margin-right: 0.75rem;
   }
   .post-title {
-    font-size: 3rem; // 모바일에서는 메인 제목 크기 줄임
+    font-size: 2.5rem; // 모바일에서는 메인 제목 크기 줄임
   }
   h2 {
     font-size: 2.25rem; // 모바일에서는 섹션 제목 크기 줄임

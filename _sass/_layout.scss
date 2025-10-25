@@ -48,55 +48,77 @@ nav a {
   }
 }
 
-// 👇 여기에 새 코드 추가 👇
 // 소개글 아래 소셜 링크
 .social-links {
   margin-top: 1.5rem;
-  color: $secondary-text-color; // "Find me on" 텍스트 색상
+  color: $secondary-text-color;
   font-size: 1rem;
   font-family: $body-font;
 }
 
 .social-links a {
-  font-weight: bold;
-  color: $text-color; // 링크는 기본 텍스트 색상
-  margin: 0 0.5rem;
-
+  font-size: 1.75rem;
+  color: $text-color;
+  margin: 0 1rem;
   &:hover {
     color: $theme-color;
-    text-decoration: none;
   }
 }
 
 .social-links span {
-  margin-right: 0.5rem;
+  margin-right: 1rem;
 }
 
 // 각 섹션의 공통 스타일
-.experience-section, .project-section, .skills-section {
+.career-section, .education-section, .project-section, .skills-section {
   padding-top: 6rem; // 섹션 간 간격을 매우 넓게
 }
 
-// 경력(Experience) 섹션
-.experience-item {
+// 경력(Career) 섹션
+.career-item {
   padding: 1.5rem 0;
   border-bottom: 1px solid $border-color;
   &:first-of-type {
     padding-top: 0;
   }
 }
-.experience-header {
+.career-header {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   margin-bottom: 0.5rem;
 }
-.experience-header span { color: $secondary-text-color; font-size: 0.9rem; }
-.experience-item ul {
+.career-header span { color: $secondary-text-color; font-size: 0.9rem; }
+.career-item ul {
   padding-left: 1.5rem;
   margin: 0;
   color: $secondary-text-color;
   line-height: 1.6;
+  font-family: $body-font; // 👈 폰트 스타일 수정
+  font-weight: 400;       // 👈 폰트 스타일 수정
+}
+
+// 'Education' 섹션 스타일
+.education-section {
+  padding-top: 6rem;
+}
+.education-category {
+  padding-bottom: 2rem;
+}
+.education-category:last-of-type {
+  padding-bottom: 0;
+}
+.education-category h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+.education-category ul {
+  padding-left: 1.5rem;
+  margin: 0;
+  color: $secondary-text-color;
+  line-height: 1.6;
+  font-family: $body-font; // 👈 폰트 스타일 수정
+  font-weight: 400;       // 👈 폰트 스타일 수정
 }
 
 // 프로젝트(Projects) 섹션
@@ -170,12 +192,12 @@ nav a {
     margin-right: 0.75rem;
   }
   .post-title {
-    font-size: 2.5rem; // 모바일에서는 메인 제목 크기 줄임
+    font-size: 2.5rem;
   }
   h2 {
-    font-size: 2.25rem; // 모바일에서는 섹션 제목 크기 줄임
+    font-size: 2.25rem;
   }
-  .experience-section, .project-section, .skills-section {
-    padding-top: 4rem; // 섹션 간 간격 줄임
+  .career-section, .education-section, .project-section, .skills-section {
+    padding-top: 4rem;
   }
 }

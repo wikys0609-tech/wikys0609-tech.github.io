@@ -62,48 +62,75 @@ nav a:hover {
 }
 
 .social-links a {
-  font-weight: bold;
+  font-size: 1.75rem;
   color: #E0E0E0;
-  margin: 0 0.5rem;
+  margin: 0 1rem;
 }
 .social-links a:hover {
   color: #7747FF;
-  text-decoration: none;
 }
 
 .social-links span {
-  margin-right: 0.5rem;
+  margin-right: 1rem;
 }
 
-.experience-section, .project-section, .skills-section {
+.career-section, .education-section, .project-section, .skills-section {
   padding-top: 6rem;
 }
 
-.experience-item {
+.career-item {
   padding: 1.5rem 0;
   border-bottom: 1px solid #E5E7EB;
 }
-.experience-item:first-of-type {
+.career-item:first-of-type {
   padding-top: 0;
 }
 
-.experience-header {
+.career-header {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   margin-bottom: 0.5rem;
 }
 
-.experience-header span {
+.career-header span {
   color: #6B7280;
   font-size: 0.9rem;
 }
 
-.experience-item ul {
+.career-item ul {
   padding-left: 1.5rem;
   margin: 0;
   color: #6B7280;
   line-height: 1.6;
+  font-family: "구름산스-레귤러", sans-serif;
+  font-weight: 400;
+}
+
+.education-section {
+  padding-top: 6rem;
+}
+
+.education-category {
+  padding-bottom: 2rem;
+}
+
+.education-category:last-of-type {
+  padding-bottom: 0;
+}
+
+.education-category h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.education-category ul {
+  padding-left: 1.5rem;
+  margin: 0;
+  color: #6B7280;
+  line-height: 1.6;
+  font-family: "구름산스-레귤러", sans-serif;
+  font-weight: 400;
 }
 
 .project-grid {
@@ -205,7 +232,7 @@ nav a:hover {
   h2 {
     font-size: 2.25rem;
   }
-  .experience-section, .project-section, .skills-section {
+  .career-section, .education-section, .project-section, .skills-section {
     padding-top: 4rem;
   }
 }

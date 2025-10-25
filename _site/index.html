@@ -2,8 +2,9 @@
 <html>
   <head>
     <title>OOO의 포트폴리오</title>
-
     <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <script src="https://kit.fontawesome.com/YOUR_OWN_KIT_ID.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <header class="header">
@@ -12,7 +13,8 @@
         <nav>
           <ul>
             <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
+            <li><a href="#career">Career</a></li>
+            <li><a href="#education">Education</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#skills">Skills</a></li>
           </ul>
@@ -21,12 +23,7 @@
     </header>
 
     <div class="container">
-
----
-layout: default
----
-
-<div class="post" id="about">
+      <div class="post" id="about">
   <header class="post-header">
     <h1 class="post-title">
      OOO의 포트폴리오
@@ -41,20 +38,24 @@ layout: default
   </article>
 
   <div class="social-links">
-      <span>Find me on</span>
-      <a href="https://github.com/[내 GitHub ID]" target="_blank">GitHub</a>
-      <span>&middot;</span>
-      <a href="https://www.linkedin.com/in/[내 링크드인 ID]" target="_blank">LinkedIn</a>
-      <span>&middot;</span>
-      <a href="mailto:[내 이메일 주소]">Email</a>
+  <span>Find me on</span>
+  <a href="https://github.com/[내 GitHub ID]" target="_blank" aria-label="GitHub">
+    <i class="fa-brands fa-github"></i>
+  </a>
+  <a href="https://www.linkedin.com/in/[내 링크드인 ID]" target="_blank" aria-label="LinkedIn">
+    <i class="fa-brands fa-linkedin"></i>
+  </a>
+  <a href="mailto:[내 이메일 주소]" aria-label="Email">
+    <i class="fa-solid fa-envelope"></i>
+  </a>
   </div>
-
 </div>
 
-<section class="experience-section" id="experience">
-  <h2>Experience</h2>
-  <div class="experience-item">
-    <div class="experience-header">
+<section class="career-section" id="career">
+  <h2>Career</h2>
+
+  <div class="career-item">
+    <div class="career-header">
       <h3>신기술 분야 교육 기획/운영</h3>
       <span>YYYY.MM ~ 현재</span>
     </div>
@@ -64,8 +65,9 @@ layout: default
       <li>수료생 데이터 분석을 통해 교육 과정 개선점을 도출하고, 차년도 과정 만족도 15%p 향상</li>
     </ul>
   </div>
-  <div class="experience-item">
-    <div class="experience-header">
+
+  <div class="career-item">
+    <div class="career-header">
       <h3>PSAT/NCS 문제 출제 전문가</h3>
       <span>YYYY.MM ~ YYYY.MM (10년 이상)</span>
     </div>
@@ -73,6 +75,37 @@ layout: default
       <li>언어논리, 자료해석, 상황판단 등 다양한 영역의 문제 2,000문항 이상 개발</li>
       <li>다수 출판사 및 교육 기관과 협업하여 주요 수험서 및 모의고사 출제</li>
       <li>정/오답률 데이터 분석을 통한 문제 난이도 조절 및 문항 품질 관리</li>
+    </ul>
+  </div>
+
+</section>
+
+<section class="education-section" id="education">
+  <h2>Education</h2>
+
+  <div class="education-category">
+    <h3>학력 (Academic Background)</h3>
+    <ul>
+      <li>OO대학교 대학원 | 정보과학 (석사)</li>
+      <li>OO대학교 | 컴퓨터과학 (학사)</li>
+      <li>OO대학교 | 경영학 (학사)</li>
+    </ul>
+  </div>
+
+  <div class="education-category">
+    <h3>주요 수료 강의 (Courses)</h3>
+    <ul>
+      <li>생성형 AI 활용과정 (프롬프트 엔지니어링, LLM)</li>
+      <li>업무 자동화 워크플로우 (RPA, Zapier)</li>
+      <li>인공지능 개발자 양성과정 (머신러닝, 딥러닝)</li>
+    </ul>
+  </div>
+
+  <div class="education-category">
+    <h3>주요 도서 (Books)</h3>
+    <ul>
+      <li>[기록하고 싶은 책 제목 1] - [저자]</li>
+      <li>[기록하고 싶은 책 제목 2] - [저자]</li>
     </ul>
   </div>
 </section>

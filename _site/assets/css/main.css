@@ -26,10 +26,18 @@ html {
   font-weight: 800;
   text-decoration: none;
   color: #E0E0E0;
+  display: flex;
+  align-items: center;
 }
 .site-title:hover {
   text-decoration: none;
   color: #7747FF;
+}
+
+.header-logo-image {
+  height: 32px;
+  width: auto;
+  margin-right: 0.75rem;
 }
 
 nav ul {

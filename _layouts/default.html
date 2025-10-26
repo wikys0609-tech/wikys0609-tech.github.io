@@ -2,14 +2,28 @@
 <html>
   <head>
     <title>{{ site.title }}</title>
+
+    <meta name="author" content="{{ site.name }}">
+    <meta name="description" content="{{ site.description }}">
+
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-    <script src="https://kit.fontawesome.com/YOUR_OWN_KIT_ID.js" crossorigin="anonymous"></script>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/img/favicon-32x32.png' | relative_url }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/img/apple-touch-icon.png' | relative_url }}">
+
   </head>
   <body>
+
     <header class="header">
       <div class="container header-container">
-        <a href="#about" class="site-title">{{ site.title }}</a>
+
+        <a href="#about" class="site-title">
+          <img src="{{ '/assets/img/header-logo.png' | relative_url }}" alt="Logo" class="header-logo-image">
+          <span>{{ site.title }}</span>
+        </a>
+
         <nav>
           <ul>
             <li><a href="#about">About</a></li>
@@ -19,6 +33,7 @@
             <li><a href="#skills">Skills</a></li>
           </ul>
         </nav>
+
       </div>
     </header>
 

@@ -28,10 +28,19 @@ html {
   font-weight: 800;
   text-decoration: none;
   color: $text-color;
+  display: flex; // 👈 로고와 글자를 가로로 배치
+  align-items: center; // 👈 세로 중앙 정렬
   &:hover {
     text-decoration: none;
     color: $theme-color;
   }
+}
+
+// 👇 로고 이미지 스타일 (새로 추가) 👇
+.header-logo-image {
+  height: 32px; // 👈 로고 높이 (30~32px 추천)
+  width: auto;
+  margin-right: 0.75rem; // 👈 로고와 제목 사이 간격
 }
 
 // 내비게이션

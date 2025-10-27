@@ -78,12 +78,44 @@ layout: default
   </div>
 
   <div class="education-category">
-    <h3>주요 수료 강의 (Courses)</h3>
-    <ul>
-      <li>생성형 AI 활용과정 (프롬프트 엔지니어링, LLM)</li>
-      <li>업무 자동화 워크플로우 (RPA, Zapier)</li>
-      <li>인공지능 개발자 양성과정 (머신러닝, 딥러닝)</li>
-    </ul>
+    <h3>수료 강의 (Courses)</h3>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+        <tr>
+          <th>교육기관</th>
+          <th>교육 분야</th>
+          <th>교육 제목</th>
+          <th>교육 시간</th>
+          <th>수료일</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>[기관명]</td>
+          <td>AI</td>
+          <td>생성형 AI 활용과정 (프롬프트 엔지니어링, LLM)</td>
+          <td>40h</td>
+          <td>YYYY.MM</td>
+        </tr>
+        <tr>
+          <td>[기관명]</td>
+          <td>업무 자동화</td>
+          <td>업무 자동화 워크플로우 (RPA, Zapier)</td>
+          <td>20h</td>
+          <td>YYYY.MM</td>
+        </tr>
+        <tr>
+          <td>[기관명]</td>
+          <td>AI</td>
+          <td>인공지능 개발자 양성과정 (머신러닝, 딥러닝)</td>
+          <td>160h</td>
+          <td>YYYY.MM</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 
   <div class="education-category">
@@ -94,11 +126,32 @@ layout: default
   </div>
 
   <div class="education-category">
-    <h3>주요 도서 (Books)</h3>
-    <ul>
-      <li>[기록하고 싶은 책 제목 1] - [저자]</li>
-      <li>[기록하고 싶은 책 제목 2] - [저자]</li>
-    </ul>
+    <h3>독서 기록 (Books)</h3>
+
+    <table class="book-table">
+      <tbody>
+      <tr>
+        <td class="book-cover">
+          <img src="{{ '/assets/img/[책표지_이미지_1.png]' | relative_url }}" alt="[책 제목 1]">
+        </td>
+        <td class="book-info">
+          <h4>[기록하고 싶은 책 제목 1]</h4>
+          <p><strong>저자:</strong> [저자 1]</p>
+          <p>[이 책에 대한 한두 줄 코멘트나 인상 깊었던 점]</p>
+        </td>
+      </tr>
+      <tr>
+        <td class="book-cover">
+          <img src="{{ '/assets/img/[책표지_이미지_2.png]' | relative_url }}" alt="[책 제목 2]">
+        </td>
+        <td class="book-info">
+          <h4>[기록하고 싶은 책 제목 2]</h4>
+          <p><strong>저자:</strong> [저자 2]</p>
+          <p>[이 책에 대한 한두 줄 코멘트나 인상 깊었던 점]</p>
+        </td>
+      </tr>
+      </tbody>
+    </table>
   </div>
 </section>
 

@@ -1,45 +1,62 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>{{ site.title }}</title>
+<head>
+  <title>{{ site.title }}</title>
 
-    <meta name="author" content="{{ site.name }}">
-    <meta name="description" content="{{ site.description }}">
+  <meta name="author" content="{{ site.name }}">
+  <meta name="description" content="{{ site.description }}">
 
-    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/img/favicon-32x32.png' | relative_url }}">
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/img/apple-touch-icon.png' | relative_url }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/img/favicon-32x32.png' | relative_url }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/img/apple-touch-icon.png' | relative_url }}">
 
-  </head>
-  <body>
+</head>
+<body>
 
-    <header class="header">
-      <div class="container header-container">
+<header class="header">
+  <div class="container header-container">
 
-        <a href="#about" class="site-title">
-          <img src="{{ '/assets/img/header-logo.png' | relative_url }}" alt="Logo" class="header-logo-image">
-          <span>{{ site.title }}</span>
-        </a>
+    <a href="#about" class="site-title">
+      <img src="{{ '/assets/img/header-logo.png' | relative_url }}" alt="Logo" class="header-logo-image">
+      <span>{{ site.title }}</span>
+    </a>
 
-        <nav>
-          <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#career">Career</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-          </ul>
-        </nav>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#career">Career</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+      </ul>
+    </nav>
 
-      </div>
-    </header>
+  </div>
+</header>
 
-    <div class="container">
-      {{ content }}
-    </div>
+<div class="container">
+  {{ content }}
+</div> <a href="#about" class="scroll-to-top" aria-label="Scroll to top">
+  <i class="fa-solid fa-arrow-up"></i>
+</a>
 
-  </body>
+<script>
+  (function() {
+      var topButton = document.querySelector('.scroll-to-top');
+      if (topButton) {
+        window.addEventListener('scroll', function() {
+          if (window.scrollY > 400) { // 400px 스크롤 내리면 보이기
+            topButton.classList.add('show');
+          } else {
+            topButton.classList.remove('show');
+          }
+        });
+      }
+    })();
+</script>
+
+</body>
 </html>

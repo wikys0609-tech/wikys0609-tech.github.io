@@ -12,6 +12,13 @@ html {
 
 .header {
   padding: 2rem 0;
+  /* 👇 고정 헤더를 위한 코드 (새로 추가) 👇 */
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #121212; /* 스크롤 시 내용이 비치지 않게 */
+  border-bottom: 1px solid #E5E7EB; /* 내용과 구분선 */
 }
 
 .header-container {
@@ -141,6 +148,89 @@ nav a:hover {
   font-weight: 400;
 }
 
+/* 👇 'Education' 섹션의 테이블 스타일 (새로 추가) 👇 */
+.education-category .table-wrapper {
+  overflow-x: auto; /* 모바일에서 가로 스크롤이 가능하게 함 */
+  margin-top: 1rem;
+}
+
+.education-category table {
+  width: 100%;
+  border-collapse: collapse; /* 테이블 선을 한 줄로 합침 */
+  font-family: "구름산스-레귤러", sans-serif;
+  font-weight: 400;
+  font-size: 0.95rem; /* 본문보다 살짝 작게 */
+}
+
+.education-category th,
+.education-category td {
+  border-bottom: 1px solid #E5E7EB; /* 아래쪽 구분선 */
+  padding: 0.85rem 1rem;
+  text-align: left;
+  color: #6B7280;
+  white-space: nowrap; /* 내용이 길어도 줄바꿈 방지 (가로 스크롤) */
+}
+
+.education-category th {
+  font-family: "구름코딩-레귤러", sans-serif; /* 표의 머리글은 제목 폰트 */
+  color: #E0E0E0;
+  font-size: 0.9rem;
+}
+
+/* ☝️ 여기까지 추가 ☝️ */
+/* 👇 'Education' 섹션의 독서 기록 테이블 (새로 추가) 👇 */
+.education-category .book-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.education-category .book-table tr {
+  border-bottom: 1px solid #E5E7EB; /* 각 책을 구분하는 선 */
+}
+
+.education-category .book-table tr:last-child {
+  border-bottom: none; /* 마지막 책은 구분선 없음 */
+}
+
+.education-category .book-table td {
+  padding: 1.5rem 0.5rem;
+  vertical-align: top; /* 이미지와 텍스트를 위쪽 기준으로 정렬 */
+}
+
+.education-category .book-table .book-cover {
+  width: 100px; /* 책 표지 이미지 컬럼의 너비 고정 */
+  padding-right: 1.5rem;
+}
+
+.education-category .book-table .book-cover img {
+  width: 100px;
+  height: auto; /* 이미지 비율 유지 */
+  border-radius: 4px; /* 모서리 살짝 둥글게 */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+}
+
+.education-category .book-table .book-info {
+  font-family: "구름산스-레귤러", sans-serif;
+  font-weight: 400;
+  color: #6B7280;
+  line-height: 1.6;
+}
+
+.education-category .book-table .book-info h4 {
+  font-family: "구름코딩-레귤러", sans-serif;
+  color: #E0E0E0;
+  font-size: 1.1rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.education-category .book-table .book-info p {
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
+}
+
+/* ☝️ 여기까지 추가 ☝️ */
 .project-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -244,6 +334,42 @@ nav a:hover {
     padding-top: 4rem;
   }
 }
+/* 👇 Top으로 가기 버튼 스타일 (새로 추가) 👇 */
+.scroll-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: #7747FF;
+  color: #FFFFFF;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px; /* 아이콘 세로 중앙 정렬 */
+  font-size: 1.25rem;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  /* 기본 상태: 숨김 */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+}
+
+.scroll-to-top.show {
+  /* 'show' 클래스가 붙으면 보이기 */
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.scroll-to-top:hover {
+  background-color: #5a2de0; /* $theme-color보다 살짝 어둡게 */
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
 @font-face {
   font-family: "엘리스코딩-볼드";
   src: url("../fonts/EliceDigitalCodingverH_Bold.ttf") format("truetype");

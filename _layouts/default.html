@@ -118,5 +118,60 @@
   })();
 </script>
 
+<script>
+  (function() {
+    var itemsPerPage = 5; // 5개 강의씩 보여주기
+    var currentPage = 1;
+    var courseTable = document.querySelector('.course-table');
+    if (!courseTable) return;
+
+    var courseRows = courseTable.querySelectorAll('tbody tr');
+    var totalItems = courseRows.length;
+    var totalPages = Math.ceil(totalItems / itemsPerPage);
+
+    var prevButton = document.getElementById('coursePrevPage');
+    var nextButton = document.getElementById('courseNextPage');
+    var pageCounter = document.getElementById('coursePageCounter');
+
+    function showPage(page) {
+      currentPage = page;
+      var startIndex = (page - 1) * itemsPerPage;
+      var endIndex = startIndex + itemsPerPage;
+
+      courseRows.forEach(function(row) {
+        row.classList.remove('visible-course');
+      });
+
+      for (var i = startIndex; i < endIndex; i++) {
+        if (courseRows[i]) {
+          courseRows[i].classList.add('visible-course');
+        }
+      }
+
+      prevButton.disabled = (currentPage === 1);
+      nextButton.disabled = (currentPage === totalPages);
+
+      if (pageCounter) {
+        pageCounter.textContent = currentPage + ' / ' + totalPages;
+      }
+    }
+
+    prevButton.addEventListener('click', function() {
+      if (currentPage > 1) {
+        showPage(currentPage - 1);
+      }
+    });
+
+    nextButton.addEventListener('click', function() {
+      if (currentPage < totalPages) {
+        showPage(currentPage + 1);
+      }
+    });
+
+    // 초기 페이지 로드
+    showPage(1);
+  })();
+</script>
+
 </body>
 </html>

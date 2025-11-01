@@ -150,7 +150,6 @@ nav a:hover {
 
 /* 👇 'Education' 섹션의 테이블 스타일 (새로 추가) 👇 */
 .education-category .table-wrapper {
-  overflow-x: auto; /* 모바일에서 가로 스크롤이 가능하게 함 */
   margin-top: 1rem;
 }
 
@@ -160,6 +159,7 @@ nav a:hover {
   font-family: "구름산스-레귤러", sans-serif;
   font-weight: 400;
   font-size: 0.95rem; /* 본문보다 살짝 작게 */
+  table-layout: fixed; /* 👈 이 한 줄을 추가하세요! */
 }
 
 .education-category th,
@@ -168,9 +168,20 @@ nav a:hover {
   padding: 0.85rem 1rem;
   text-align: left;
   color: #6B7280;
-  white-space: nowrap; /* 내용이 길어도 줄바꿈 방지 (가로 스크롤) */
 }
 
+/* 👇 테이블 너비 조절용 (새로 추가) 👇 */
+.education-category .course-table th:nth-child(3),
+.education-category .course-table td:nth-child(3) {
+  width: 50%; /* '교육 제목' 열이 50%를 차지하고 알아서 줄바꿈 */
+}
+
+.education-category .course-table th:nth-child(4),
+.education-category .course-table td:nth-child(4) {
+  white-space: nowrap; /* '교육 시간' 열은 절대 줄바꿈 안 함 */
+}
+
+/* ☝️ 여기까지 ☝️ */
 .education-category th {
   font-family: "구름코딩-레귤러", sans-serif; /* 표의 머리글은 제목 폰트 */
   color: #E0E0E0;
@@ -242,6 +253,17 @@ nav a:hover {
   display: table-row; /* 자바스크립트가 이 클래스를 추가/제거할 것임 */
 }
 
+/* 👇 이 코드가 빠졌을 겁니다! (새로 추가) 👇 */
+/* 수료 강의 테이블 행 숨기기 */
+.education-category .course-table tbody tr {
+  display: none; /* 기본적으로 모든 강의를 숨김 */
+}
+
+.education-category .course-table tbody tr.visible-course {
+  display: table-row; /* JS가 이 클래스를 붙여서 보여줄 것임 */
+}
+
+/* ☝️ 여기까지 ☝️ */
 /* 👇 페이지네이션 버튼 스타일 (새로 추가) 👇 */
 .pagination-controls {
   margin-top: 2rem;
@@ -322,7 +344,7 @@ nav a:hover {
 
 .skills-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(3, 1fr); /* 👈 데스크톱에서 3열로 변경 */
   gap: 2.5rem;
 }
 
@@ -376,6 +398,10 @@ nav a:hover {
   }
   .career-section, .education-section, .project-section, .skills-section {
     padding-top: 4rem;
+  }
+  /* 👇 여기에 Skills 그리드 모바일 코드 추가 👇 */
+  .skills-grid {
+    grid-template-columns: 1fr; /* 👈 모바일에선 1열로 보이게 함 */
   }
 }
 /* 👇 Top으로 가기 버튼 스타일 (새로 추가) 👇 */

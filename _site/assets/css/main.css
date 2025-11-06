@@ -344,10 +344,6 @@ nav a:hover {
 .project-link {
   font-weight: bold;
   font-family: "구름산스-레귤러", sans-serif;
-
-  &:not(:last-child) { /* 👇 링크 사이에 여백 추가 (새로 추가) */
-    margin-right: 1.5rem;
-  }
 }
 .project-link:not(:last-child) { /* 👇 링크 사이에 여백 추가 (새로 추가) */
   margin-right: 1.5rem;

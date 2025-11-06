@@ -337,9 +337,17 @@ nav a:hover {
   color: #4b5563;
 }
 
+.project-links { /* 👇 링크 래퍼 스타일 (새로 추가) */
+  margin-top: 1.5rem;
+}
+
 .project-link {
   font-weight: bold;
   font-family: "구름산스-레귤러", sans-serif;
+
+  &:not(:last-child) { /* 👇 링크 사이에 여백 추가 (새로 추가) */
+    margin-right: 1.5rem;
+  }
 }
 
 .skills-grid {

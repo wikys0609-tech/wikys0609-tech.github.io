@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<div class="post" id="about">
+<div class="container"> <div class="post" id="about">
   <header class="post-header">
     <h1 class="post-title">
       {{ site.title }}
@@ -12,10 +12,10 @@ layout: default
 
   <article>
     <p>
-      경영학, 그리고 뒤이어 컴퓨터 과학과 미디어아트를 전공하며 인문학과 기술의 접점을 탐구했습니다. 10년 이상 PSAT/NCS 문제 출제 전문가로 활동하며 논리적 사고와 데이터 기반의 문제 해결 역량을 길렀습니다.
+      AI 및 빅데이터 신기술 분야(K-Digital Training, 미래내일 일경험 등) 교육 과정을 총괄 기획/운영하는 실무형 전문가입니다. 커리큘럼 설계, 강사 섭외, 프로젝트 기반 학습(PBL) 도입부터 성과 평가까지 교육의 전 과정을 주도하고 있습니다.
     </p>
     <p>
-      이 경험을 바탕으로, 현재는 4년 이상 신기술 분야(K-Digital Training, 미래내일 일경험 등)의 AI 및 빅데이터 교육 과정을 기획/운영하고 있습니다. 단순한 기획을 넘어 커리큘럼 설계부터 성과 평가까지 전 과정을 주도하며, 꾸준한 자기 학습(각종 AI 강의 수료, 데이터 자격증 취득)을 통해 기술과 교육을 잇는 실무형 전문가로 일하고 있습니다.
+      이러한 기획 역량은 독특한 이력에서 나옵니다. 10년 이상 PSAT/NCS 문제 출제 전문가로 활동하며 다져진 논리적 사고와 데이터 분석력, 그리고 경영학과 컴퓨터 과학을 아우르는 학문적 배경이 저의 강력한 기반입니다. 꾸준한 AI 강의 수료와 자격증 취득을 통해 기술과 교육을 잇는 역할을 계속하고 있습니다.
     </p>
   </article>
 
@@ -74,6 +74,7 @@ layout: default
   <div class="education-category">
     <h3>학력 (Academic Background)</h3>
     <ul>
+      <li>[2025] 서울사이버대학교 | 인공지능 (ing)</li>
       <li>[2017] 한국방송통신대학교 | 컴퓨터과학/미디어영상학 (학사)</li>
       <li>[2006] 서울시립대학교 | 경영학 (학사)</li>
     </ul>
@@ -376,21 +377,6 @@ layout: default
   <h2>Projects</h2>
   <div class="project-grid">
     <div class="project-card">
-      <h3>[개발중] PSAT Trainer Pro</h3>
-      <p>10년 이상의 PSAT/NCS 문제 출제 경험을 바탕으로 개발한 실전 PSAT 트레이닝 웹 애플리케이션입니다. Vercel을 통해 배포되었습니다.</p>
-      <ul>
-        <li>Next.js</li>
-        <li>React</li>
-        <li>JavaScript</li>
-        <li>Vercel</li>
-      </ul>
-
-      <div class="project-links">
-        <a href="https://psat-trainer-pro.vercel.app/" target="_blank" class="project-link">Live Site &rarr;</a>
-      </div>
-
-    </div>
-    <div class="project-card">
       <h3>[개발중] K-Digital Training 관리자 대시보드</h3>
       <p>K-Digital Training 교육 사업 운영을 위한 학습 관리 시스템(LMS) 대시보드입니다. 과정, 강사, 학생, 수료 현황 등을 관리하는 기능을 구현했습니다.</p>
       <ul>
@@ -405,6 +391,23 @@ layout: default
       </div>
 
     </div>
+
+    <div class="project-card">
+      <h3>[개발중] PSAT Trainer Pro</h3>
+      <p>10년 이상의 PSAT/NCS 문제 출제 경험을 바탕으로 개발한 실전 PSAT 트레이닝 웹 애플리케이션입니다. Vercel을 통해 배포되었습니다.</p>
+      <ul>
+        <li>Next.js</li>
+        <li>React</li>
+        <li>JavaScript</li>
+        <li>Vercel</li>
+      </ul>
+
+      <div class="project-links">
+        <a href="https://psat-trainer-pro.vercel.app/" target="_blank" class="project-link">Live Site &rarr;</a>
+      </div>
+
+    </div>
+    
   </div>
 </section>
 
@@ -441,7 +444,7 @@ layout: default
   </div>
 </section>
 
-<footer class="site-footer">
+</div> <footer class="site-footer">
   <div class="container">
     <p>&copy; {{ site.time | date: '%Y' }} {{ site.name }}. All rights reserved.</p>
     <div class="footer-links">

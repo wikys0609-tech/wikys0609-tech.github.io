@@ -499,7 +499,7 @@
       var topButton = document.querySelector('.scroll-to-top');
       if (topButton) {
         window.addEventListener('scroll', function() {
-          if (window.scrollY > 400) { // 400px 스크롤 내리면 보이기
+          if (window.scrollY > 400) {
             topButton.classList.add('show');
           } else {
             topButton.classList.remove('show');
@@ -511,10 +511,10 @@
 
 <script>
   (function() {
-    var itemsPerPage = 3; // 3권씩 보여주기
+    var itemsPerPage = 3;
     var currentPage = 1;
     var bookTable = document.querySelector('.book-table');
-    if (!bookTable) return; // 테이블이 없으면 중단
+    if (!bookTable) return;
 
     var bookRows = bookTable.querySelectorAll('tbody tr');
     var totalItems = bookRows.length;
@@ -529,29 +529,24 @@
       var startIndex = (page - 1) * itemsPerPage;
       var endIndex = startIndex + itemsPerPage;
 
-      // 모든 행을 숨김
       bookRows.forEach(function(row) {
         row.classList.remove('visible-book');
       });
 
-      // 현재 페이지의 행만 보여줌
       for (var i = startIndex; i < endIndex; i++) {
         if (bookRows[i]) {
           bookRows[i].classList.add('visible-book');
         }
       }
 
-      // 버튼 활성/비활성
       prevButton.disabled = (currentPage === 1);
       nextButton.disabled = (currentPage === totalPages);
 
-      // 페이지 카운터 업데이트
       if (pageCounter) {
         pageCounter.textContent = currentPage + ' / ' + totalPages;
       }
     }
 
-    // 버튼 클릭 이벤트
     prevButton.addEventListener('click', function() {
       if (currentPage > 1) {
         showPage(currentPage - 1);
@@ -564,14 +559,13 @@
       }
     });
 
-    // 초기 페이지 로드
     showPage(1);
   })();
 </script>
 
 <script>
   (function() {
-    var itemsPerPage = 5; // 5개 강의씩 보여주기
+    var itemsPerPage = 5;
     var currentPage = 1;
     var courseTable = document.querySelector('.course-table');
     if (!courseTable) return;
@@ -619,7 +613,6 @@
       }
     });
 
-    // 초기 페이지 로드
     showPage(1);
   })();
 </script>

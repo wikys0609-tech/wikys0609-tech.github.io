@@ -7,9 +7,9 @@
 body {
   background-color: $background-color;
   color: $text-color;
-  font-family: $body-font; // 👈 웹사이트 전체 기본 폰트를 Inter로 설정
+  font-family: $body-font; // 웹사이트 전체 기본 폰트
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $heading-font; // 👈 모든 제목 폰트를 Syne으로 설정
+  font-family: $heading-font; // 모든 제목 폰트
 }

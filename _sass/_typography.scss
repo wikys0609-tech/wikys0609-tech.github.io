@@ -11,9 +11,6 @@
   font-weight: 400;
 }
 
-/* --- 8가지 커스텀 폰트 등록 --- */
-
-/* 북끄 고딕 계열 */
 @font-face {
   font-family: '북끄고딕-볼드';
   src: url('../fonts/BookkGothic_Bold.ttf') format('truetype');
@@ -25,7 +22,6 @@
   font-weight: 300;
 }
 
-/* 북끄 명조 계열 */
 @font-face {
   font-family: '북끄명조-볼드';
   src: url('../fonts/BookkMyungjo_Bold.ttf') format('truetype');
@@ -37,7 +33,6 @@
   font-weight: 300;
 }
 
-/* 구름 산스 계열 */
 @font-face {
   font-family: '구름산스-볼드';
   src: url('../fonts/goorm-sans-bold.ttf') format('truetype');
@@ -59,13 +54,10 @@
   font-weight: 400;
 }
 
-
-
-
-// 기본 타이포그래피 스타일
+// 기본  스타일
 body {
   font-family: $body-font;
-  font-size: 1.125rem; // 18px
+  font-size: 1.125rem;
   line-height: 1.7;
   background-color: $background-color;
   color: $text-color;

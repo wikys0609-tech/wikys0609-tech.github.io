@@ -12,7 +12,6 @@ html {
 
 .header {
   padding: 2rem 0;
-  /* 👇 고정 헤더를 위한 코드 (새로 추가) 👇 */
   position: sticky;
   top: 0;
   width: 100%;
@@ -148,48 +147,45 @@ nav a:hover {
   font-weight: 400;
 }
 
-/* 👇 'Education' 섹션의 테이블 스타일 (새로 추가) 👇 */
+/* 'Education' 섹션 테이블 스타일 */
 .education-category .table-wrapper {
   margin-top: 1rem;
 }
 
 .education-category table {
   width: 100%;
-  border-collapse: collapse; /* 테이블 선을 한 줄로 합침 */
+  border-collapse: collapse;
   font-family: "구름산스-레귤러", sans-serif;
   font-weight: 400;
-  font-size: 0.95rem; /* 본문보다 살짝 작게 */
-  table-layout: fixed; /* 👈 이 한 줄을 추가하세요! */
+  font-size: 0.95rem;
+  table-layout: fixed;
 }
 
 .education-category th,
 .education-category td {
-  border-bottom: 1px solid #E5E7EB; /* 아래쪽 구분선 */
+  border-bottom: 1px solid #E5E7EB;
   padding: 0.85rem 1rem;
   text-align: left;
   color: #6B7280;
 }
 
-/* 👇 테이블 너비 조절용 (새로 추가) 👇 */
 .education-category .course-table th:nth-child(3),
 .education-category .course-table td:nth-child(3) {
-  width: 50%; /* '교육 제목' 열이 50%를 차지하고 알아서 줄바꿈 */
+  width: 50%;
 }
 
 .education-category .course-table th:nth-child(4),
 .education-category .course-table td:nth-child(4) {
-  white-space: nowrap; /* '교육 시간' 열은 절대 줄바꿈 안 함 */
+  white-space: nowrap;
 }
 
-/* ☝️ 여기까지 ☝️ */
 .education-category th {
-  font-family: "구름코딩-레귤러", sans-serif; /* 표의 머리글은 제목 폰트 */
+  font-family: "구름코딩-레귤러", sans-serif;
   color: #E0E0E0;
   font-size: 0.9rem;
 }
 
-/* ☝️ 여기까지 추가 ☝️ */
-/* 👇 'Education' 섹션의 독서 기록 테이블 (새로 추가) 👇 */
+/* 'Education' 섹션 독서 기록 테이블 */
 .education-category .book-table {
   width: 100%;
   border-collapse: collapse;
@@ -197,29 +193,29 @@ nav a:hover {
 }
 
 .education-category .book-table tr {
-  border-bottom: 1px solid #E5E7EB; /* 각 책을 구분하는 선 */
+  border-bottom: 1px solid #E5E7EB;
 }
 
 .education-category .book-table tr:last-child {
-  border-bottom: none; /* 마지막 책은 구분선 없음 */
+  border-bottom: none;
 }
 
 .education-category .book-table td {
   padding: 1.5rem 0.5rem;
-  vertical-align: top; /* 이미지와 텍스트를 위쪽 기준으로 정렬 */
+  vertical-align: top;
 }
 
 .education-category .book-table .book-cover {
-  width: 100px; /* 책 표지 이미지 컬럼의 너비 고정 */
+  width: 100px;
   padding-right: 1.5rem;
 }
 
 .education-category .book-table .book-cover img {
   width: 100px;
-  height: 150px; /* 👈 이미지 높이를 150px로 고정 */
-  object-fit: cover; /* 👈 비율이 달라도 찌그러지지 않고, 액자에 꽉 차게 설정 */
-  border-radius: 4px; /* 모서리 살짝 둥글게 */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+  height: 150px;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .education-category .book-table .book-info {
@@ -242,29 +238,23 @@ nav a:hover {
   font-size: 0.9rem;
 }
 
-/* ☝️ 여기까지 추가 ☝️ */
-/* 👇 독서 기록 테이블 행 숨기기 (새로 추가) 👇 */
 .education-category .book-table tbody tr {
-  display: none; /* 기본적으로 모든 책을 숨김 */
+  display: none;
 }
 
-/* 👇 '보여줄 책'으로 선택된 행만 보이게 함 (새로 추가) 👇 */
 .education-category .book-table tbody tr.visible-book {
-  display: table-row; /* 자바스크립트가 이 클래스를 추가/제거할 것임 */
+  display: table-row;
 }
 
-/* 👇 이 코드가 빠졌을 겁니다! (새로 추가) 👇 */
-/* 수료 강의 테이블 행 숨기기 */
 .education-category .course-table tbody tr {
-  display: none; /* 기본적으로 모든 강의를 숨김 */
+  display: none;
 }
 
 .education-category .course-table tbody tr.visible-course {
-  display: table-row; /* JS가 이 클래스를 붙여서 보여줄 것임 */
+  display: table-row;
 }
 
-/* ☝️ 여기까지 ☝️ */
-/* 👇 페이지네이션 버튼 스타일 (새로 추가) 👇 */
+/* 페이지네이션 버튼 */
 .pagination-controls {
   margin-top: 2rem;
   text-align: center;
@@ -283,7 +273,7 @@ nav a:hover {
   transition: background-color 0.2s ease;
 }
 .pagination-controls button:hover {
-  background-color: #5a2de0; /* $theme-color보다 살짝 어둡게 */
+  background-color: #5a2de0;
 }
 .pagination-controls button:disabled {
   background-color: #ccc;
@@ -296,7 +286,6 @@ nav a:hover {
   color: #6B7280;
 }
 
-/* ☝️ 여기까지 추가 ☝️ */
 .project-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -337,7 +326,7 @@ nav a:hover {
   color: #4b5563;
 }
 
-.project-links { /* 👇 링크 래퍼 스타일 (새로 추가) */
+.project-links {
   margin-top: 1.5rem;
 }
 
@@ -345,13 +334,13 @@ nav a:hover {
   font-weight: bold;
   font-family: "구름산스-레귤러", sans-serif;
 }
-.project-link:not(:last-child) { /* 👇 링크 사이에 여백 추가 (새로 추가) */
+.project-link:not(:last-child) {
   margin-right: 1.5rem;
 }
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 👈 데스크톱에서 3열로 변경 */
+  grid-template-columns: repeat(3, 1fr);
   gap: 2.5rem;
 }
 
@@ -385,7 +374,7 @@ nav a:hover {
   text-decoration: none;
 }
 
-/* 모바일 반응형 디자인 */
+/* 모바일 반응형 */
 @media (max-width: 768px) {
   .header-container {
     flex-direction: column;
@@ -406,12 +395,11 @@ nav a:hover {
   .career-section, .education-section, .project-section, .skills-section {
     padding-top: 4rem;
   }
-  /* 👇 여기에 Skills 그리드 모바일 코드 추가 👇 */
   .skills-grid {
-    grid-template-columns: 1fr; /* 👈 모바일에선 1열로 보이게 함 */
+    grid-template-columns: 1fr; /* 모바일에선 1열로 */
   }
 }
-/* 👇 Top으로 가기 버튼 스타일 (새로 추가) 👇 */
+/* Top으로 가기 버튼 */
 .scroll-to-top {
   position: fixed;
   bottom: 2rem;
@@ -422,7 +410,7 @@ nav a:hover {
   height: 50px;
   border-radius: 50%;
   text-align: center;
-  line-height: 50px; /* 아이콘 세로 중앙 정렬 */
+  line-height: 50px;
   font-size: 1.25rem;
   text-decoration: none;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -435,14 +423,13 @@ nav a:hover {
 }
 
 .scroll-to-top.show {
-  /* 'show' 클래스가 붙으면 보이기 */
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
 }
 
 .scroll-to-top:hover {
-  background-color: #5a2de0; /* $theme-color보다 살짝 어둡게 */
+  background-color: #5a2de0;
   color: #FFFFFF;
   text-decoration: none;
 }
@@ -457,8 +444,6 @@ nav a:hover {
   src: url("../fonts/EliceDigitalCodingverH_Regular.ttf") format("truetype");
   font-weight: 400;
 }
-/* --- 8가지 커스텀 폰트 등록 --- */
-/* 북끄 고딕 계열 */
 @font-face {
   font-family: "북끄고딕-볼드";
   src: url("../fonts/BookkGothic_Bold.ttf") format("truetype");
@@ -469,7 +454,6 @@ nav a:hover {
   src: url("../fonts/BookkGothic_Light.ttf") format("truetype");
   font-weight: 300;
 }
-/* 북끄 명조 계열 */
 @font-face {
   font-family: "북끄명조-볼드";
   src: url("../fonts/BookkMyungjo_Bold.ttf") format("truetype");
@@ -480,7 +464,6 @@ nav a:hover {
   src: url("../fonts/BookkMyungjo_Light.ttf") format("truetype");
   font-weight: 300;
 }
-/* 구름 산스 계열 */
 @font-face {
   font-family: "구름산스-볼드";
   src: url("../fonts/goorm-sans-bold.ttf") format("truetype");
